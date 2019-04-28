@@ -6,9 +6,11 @@ const app     = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-require('./routes');
+// require('./models/cliente');
+require('./routes/index');
+// require('./controllers/clienteController');
 
-app.get('/', (req,res) => {
+app.get('/app', (req,res) => {
   res.send('NoverFood em Construção!');
 }); 
 

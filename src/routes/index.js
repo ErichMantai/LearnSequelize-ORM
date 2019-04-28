@@ -1,4 +1,4 @@
-const clienteRoutes= require('../routes').clienteRoutes;
+const clienteRoutes = require('./cliente');
 
 module.exports =  {
     clienteRoutes,
