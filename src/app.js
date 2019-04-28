@@ -6,7 +6,7 @@ const app     = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-require('./routes').clienteRoutes;
+require('./routes');
 
 app.get('/', (req,res) => {
   res.send('NoverFood em Construção!');
