@@ -1,0 +1,17 @@
+{
+  "name": "noverfood",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/app.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4",
+    "sequelize": "^5.7.6"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^5.4.0"
+  }
+}
