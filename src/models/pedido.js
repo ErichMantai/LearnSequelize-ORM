@@ -22,11 +22,11 @@ module.exports = (sequelize, DataTypes) => {
      references: {model: 'caixa', key: 'id'} 
     }
   }, {freezeTableName :true});
-  Pedido.associate = function(models) {
-    Pedido.hasOne(models.Cliente);
-    Pedido.hasOne(models.Usuario);
-    Pedido.hasOne(models.Caixa);
-    Pedido.hasMany(models.Pagamento);
-  };
+  // Pedido.associate = function(models) {
+    // Pedido.hasOne(models.Cliente);
+    // Pedido.hasOne(models.Usuario);
+    // Pedido.hasOne(models.Caixa);
+    // Pedido.hasMany(models.Pagamento);
+  // };
   return Pedido;
 };

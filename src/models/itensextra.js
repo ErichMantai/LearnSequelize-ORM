@@ -11,9 +11,9 @@ module.exports = (sequelize, DataTypes) => {
     }, 
     valor: DataTypes.DOUBLE
   }, {freezeTableName:true});
-  Itensextra.associate = function(models) {
-    Itensextra.hasMany(models.Produto);
-    Itensextra.belongsTo(models.Itenspedido);
-  };
+  // Itensextra.associate = function(models) {
+    // Itensextra.hasMany(models.Produto);
+    // Itensextra.belongsTo(models.Itenspedido);
+  // };
   return Itensextra;
 };

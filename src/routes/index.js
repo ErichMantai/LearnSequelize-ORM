@@ -1,5 +1,5 @@
 const clienteRoutes = require('./cliente');
 
-module.exports =  {
+export default   {
     clienteRoutes,
-}
+};

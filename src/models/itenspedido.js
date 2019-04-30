@@ -14,10 +14,10 @@ module.exports = (sequelize, DataTypes) => {
     vl_unitario: DataTypes.DOUBLE,
     vl_total: DataTypes.DOUBLE
   }, {freezeTableName :true});
-  Itenspedido.associate = function(models) {
-    Itenspedido.hasOne(models.Pedido);
-    Itenspedido.hasMany(models.Produto);
-    Itenspedido.hasMany(models.Itensextras);
-  };
+  // Itenspedido.associate = function(models) {
+    // Itenspedido.hasOne(models.Pedido);
+    // Itenspedido.hasMany(models.Produto);
+    // Itenspedido.hasMany(models.Itensextras);
+  // };
   return Itenspedido;
 };

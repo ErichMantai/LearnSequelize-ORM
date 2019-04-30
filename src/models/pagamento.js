@@ -8,8 +8,8 @@ module.exports = (sequelize, DataTypes) => {
     pagamento_tipo: DataTypes.STRING,
     valor: DataTypes.DOUBLE
   }, {freezeTableName :true});
-  Pagamento.associate = function(models) {
-    Pagamento.belongsTo(models.Pedido);
-  };
+  // Pagamento.associate = function(models) {
+    // Pagamento.belongsTo(models.Pedido);
+  // };
   return Pagamento;
 };

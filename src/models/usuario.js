@@ -6,9 +6,9 @@ module.exports = (sequelize, DataTypes) => {
     }, {
       freezeTableName :true
     });
-    Usuario.associate = function(models){
-      Usuario.hasMany(models.Pedido);
-    }
+    // Usuario.associate = function(models){
+      // Usuario.hasMany(models.Pedido);
+    // }
   return Usuario;  
   
   }

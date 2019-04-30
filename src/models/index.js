@@ -1,12 +1,9 @@
-'use strict';
-
 const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');
-const config = require('./../../config/database');
+const config = require('../../config/database.js');
 
 const db = {};
-
 const sequelize = new Sequelize(config);
 
 fs
@@ -22,8 +19,8 @@ Object.keys(db).forEach((modelName) => {
     db[modelName].associate(db);
   }
 });
+
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
-db.cliente = require('../models/cliente')(sequelize, Sequelize);
 
 module.exports = db;

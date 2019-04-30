@@ -12,11 +12,11 @@ module.exports = (sequelize, DataTypes) => {
     {
       freezeTableName :true
     });
-    Produto.associate = function(models){
-        Produto.hasOne(models.Categoria);
-        Produto.belongsTo(models.Itensextras);
-        Produto.belongsTo(models.Itenspedido);
-    }
+    // Produto.associate = function(models){
+        // Produto.hasOne(models.Categoria);
+        // Produto.belongsTo(models.Itensextras);
+        // Produto.belongsTo(models.Itenspedido);
+    // }
     return Produto;  
   }
   

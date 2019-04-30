@@ -13,9 +13,9 @@ module.exports = (sequelize, DataTypes) => {
     }, {
       freezeTableName :true
     });
-    ClienteEndereco.associate = function (models) {
-      ClienteEndereco.belongsTo(models.Cliente);
-    };
+    // ClienteEndereco.associate = function (models) {
+      // ClienteEndereco.belongsTo(models.Cliente);
+    // };
   return ClienteEndereco;  
   
   }

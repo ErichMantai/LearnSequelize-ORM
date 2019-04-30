@@ -5,8 +5,8 @@ module.exports = (sequelize, DataTypes) => {
     }, {
       freezeTableName :true
     });
-    Categoria.associate = function(models) {
-      this.hasMany(models.Produto);
-    }
+    // Categoria.associate = function(models) {
+      // this.hasMany(models.Produto);
+    // }
   return Categoria;   
   }
