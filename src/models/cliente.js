@@ -6,7 +6,6 @@
    }, {
      freezeTableName :true
    });
-    //  clienteModel.sync();
     //  clienteModel.associate = function(models){
     //  clienteModel.hasMany(models.ClienteEndereco);
     //  clienteModel.hasMany(models.Pedido);
