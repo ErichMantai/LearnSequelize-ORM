@@ -15,9 +15,9 @@ module.exports = {
         allowNull: false,
         type: DataTypes.STRING,
       },
-      tipo: {
+      isAdmin: {
         allowNull: false,
-        type: DataTypes.STRING,
+        type: DataTypes.BOOLEAN,
       },
       createdAt: {
         allowNull: false,

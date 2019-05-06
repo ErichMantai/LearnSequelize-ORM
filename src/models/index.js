@@ -3,7 +3,12 @@ const path = require('path');
 const Sequelize = require('sequelize');
 const config = require('../../config/database.js');
 
-const db = {};
+const db = {
+  Cliente: require('./cliente'),
+  Usuario: require('./usuario'),
+  Categoria: require('./categoria'),
+  Produto: require('./produto'),
+};
 const sequelize = new Sequelize(config);
 
 fs
@@ -22,7 +27,11 @@ Object.keys(db).forEach((modelName) => {
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
-db.cliente = require('../models/cliente')(sequelize, Sequelize);
-db.usuario = require('../models/usuario')(sequelize, Sequelize);
+db.Produto.belongsTo(db.Categoria, {as:'categoria'});
+// db.Categoria.hasOne(db.Produto);
+// db.cliente = require('../models/cliente')(sequelize, Sequelize);
+// db.usuario = require('../models/usuario')(sequelize, Sequelize);
+// db.categoria = require('../models/categoria')(sequelize, Sequelize);
+// db.produto = require('../models/produto')(sequelize, Sequelize);
 
 module.exports = db;

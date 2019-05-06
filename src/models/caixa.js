@@ -9,9 +9,9 @@ module.exports = (sequelize, DataTypes) => {
     dinheiro_fechamento:DataTypes.DOUBLE,
     caixa_total:        DataTypes.DOUBLE,
   }, {freezeTableName :true});
-  // Caixa.associate = function(models) {
+  Caixa.associate = function(models) {
     // Caixa.hasMany(models.Pedido);
     // Pedido.hasOne(models.Caixa);
-  // };
+  };
   return Caixa;
 };

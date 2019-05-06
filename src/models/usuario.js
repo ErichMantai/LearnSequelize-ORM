@@ -2,7 +2,7 @@ module.exports = (sequelize, DataTypes) => {
     const  Usuario = sequelize.define('Usuario', {
        nome: DataTypes.STRING,
        senha: DataTypes.STRING,
-       tipo: DataTypes.STRING, 
+       isAdmin: DataTypes.BOOLEAN, 
     }, {
       freezeTableName :true
     });

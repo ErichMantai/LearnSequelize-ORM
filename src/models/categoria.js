@@ -1,12 +1,13 @@
 module.exports = (sequelize, DataTypes) => {
     const  Categoria = sequelize.define('Categoria', {
-       nome: DataTypes.STRING,
        categoria: DataTypes.STRING,
     }, {
-      freezeTableName :true
+      freezeTableName :true,
+      // underscored: true
     });
     // Categoria.associate = function(models) {
-      // this.hasMany(models.Produto);
+      // Categoria.hasOne(models.Produto);
     // }
   return Categoria;   
   }
+  

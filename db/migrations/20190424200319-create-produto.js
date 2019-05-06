@@ -17,6 +17,7 @@ module.exports = {
         references: {model:'categoria', key: 'id'},
         onUpdate: 'cascade',              
         onDelete: 'cascade',
+        defaultValue: true,
       },
       vl_unitario: {
         allowNull:false,
@@ -29,7 +30,15 @@ module.exports = {
      codigo: {
        allowNull: true,
        type: DataTypes.STRING,
-     }
+     },
+     createdAt: {
+      allowNull: false,
+      type: DataTypes.DATE,
+    },
+    updatedAt: {
+      allowNull: false,
+      type: DataTypes.DATE,
+    },
     })
   },
 

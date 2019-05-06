@@ -1,8 +1,8 @@
 module.exports = (sequelize, DataTypes) => {
     const Produto = sequelize.define('Produto', {
        nome: DataTypes.STRING,
-       categoria: {
-        type: DataTypes.DATE,
+       categoria_id: {
+        type: DataTypes.INTEGER,
         references: {model: 'categoria', key: 'id'}    
        }, 
        vl_unitario: DataTypes.DECIMAL(10,2),
@@ -10,12 +10,14 @@ module.exports = (sequelize, DataTypes) => {
        codigo: DataTypes.STRING 
     }, 
     {
-      freezeTableName :true
+      freezeTableName :true,
+      // underscored: true
     });
     // Produto.associate = function(models){
         // Produto.hasOne(models.Categoria);
-        // Produto.belongsTo(models.Itensextras);
-        // Produto.belongsTo(models.Itenspedido);
+        // models.Categoria.hasOne(Produto);
+        // Produto.hasMany(models.Itensextras);
+        // Produto.hasMany(models.Itenspedido);
     // }
     return Produto;  
   }
