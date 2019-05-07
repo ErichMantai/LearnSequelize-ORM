@@ -12,6 +12,7 @@ app.use(require('./routes/cliente'));
 app.use(require('./routes/usuario'));
 app.use(require('./routes/categoria'));
 app.use(require('./routes/produto'));
+app.use(require('./routes/endereco'));
 
 app.get('/app', (req,res) => {
    res.send('NoverFood em Construção!');

@@ -1,9 +1,11 @@
 module.exports = (sequelize, DataTypes) => {
     const Produto = sequelize.define('Produto', {
        nome: DataTypes.STRING,
-       categoria_id: {
+       categoriaId: {
+        field: 'categoria_Id',
         type: DataTypes.INTEGER,
-        references: {model: 'categoria', key: 'id'}    
+        references: {model: 'categoria', key: 'id'},
+        defaultValue: true
        }, 
        vl_unitario: DataTypes.DECIMAL(10,2),
        ativo: DataTypes.BOOLEAN,
@@ -11,14 +13,7 @@ module.exports = (sequelize, DataTypes) => {
     }, 
     {
       freezeTableName :true,
-      // underscored: true
     });
-    // Produto.associate = function(models){
-        // Produto.hasOne(models.Categoria);
-        // models.Categoria.hasOne(Produto);
-        // Produto.hasMany(models.Itensextras);
-        // Produto.hasMany(models.Itenspedido);
-    // }
     return Produto;  
   }
   

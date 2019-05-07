@@ -8,6 +8,7 @@ const db = {
   Usuario: require('./usuario'),
   Categoria: require('./categoria'),
   Produto: require('./produto'),
+  clienteEndereco: require('./endereco'),
 };
 const sequelize = new Sequelize(config);
 
@@ -27,11 +28,7 @@ Object.keys(db).forEach((modelName) => {
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
+db.Cliente.hasMany(db.clienteEndereco);
 db.Produto.belongsTo(db.Categoria, {as:'categoria'});
-// db.Categoria.hasOne(db.Produto);
-// db.cliente = require('../models/cliente')(sequelize, Sequelize);
-// db.usuario = require('../models/usuario')(sequelize, Sequelize);
-// db.categoria = require('../models/categoria')(sequelize, Sequelize);
-// db.produto = require('../models/produto')(sequelize, Sequelize);
 
 module.exports = db;

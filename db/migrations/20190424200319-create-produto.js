@@ -15,9 +15,7 @@ module.exports = {
         allowNull: false,
         type: DataTypes.INTEGER,
         references: {model:'categoria', key: 'id'},
-        onUpdate: 'cascade',              
-        onDelete: 'cascade',
-        defaultValue: true,
+        onUpdate: 'cascade',             
       },
       vl_unitario: {
         allowNull:false,

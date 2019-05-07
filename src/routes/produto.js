@@ -16,13 +16,14 @@ app.get('/app/produto',async(req,res)=>{
 });
 
 app.get('/app/produto/:id',async(req,res)=>{
-    await models.Produto.findOne({where:{id: req.params.id}, include: [{model: models.Categoria, as: 'categoria'}]})
+    await models.Produto.findOne({where:{id: req.params.id},
+    include: {model: models.Categoria, as: 'categoria'}})
     .then(produto=>{res.json(produto)});
 });
 
 app.put('/app/updateproduto/:id',async(req,res)=>{
     await models.Produto.update(req.body, {where: {id: req.params.id}})
-    .then(produto=>{res.json(produto)});
+    .then(produto=>{res.send('Produto Alterado Com Sucesso!')});
 });
 
 app.delete('/app/deleteproduto/:id', async(req,res)=>{
