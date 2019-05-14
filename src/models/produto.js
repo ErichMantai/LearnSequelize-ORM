@@ -14,6 +14,9 @@ module.exports = (sequelize, DataTypes) => {
     {
       freezeTableName :true,
     });
+    Produto.associate = function(models) {
+    Produto.belongsTo(models.Categoria, {as:'categoria'});
+    }
     return Produto;  
   }
   

@@ -4,7 +4,7 @@ const models = require('../models/index');
 
 app.post('/app/newendereco', async(req,res)=>{
     const { cliente, ...data} = req.body;
-    const resposta = await models.clienteEndereco.create(data)
+    const resposta = await models.ClienteEndereco.create(data)
     if (cliente && cliente.length > 0) {
        resposta.setCliente(cliente);
     }
@@ -17,7 +17,7 @@ app.get('/app/clienteendereco',async(req,res)=>{
 
 app.get('/app/clienteendereco/:id',async(req,res)=>{
     await models.clienteEndereco.findOne({where:{id: req.params.id},
-    include: {model: models.Cliente, as: 'cliente'}})
+    include: {model: models.Cliente, as: 'endereco'}})
     .then(endereco=>{res.json(endereco)});
 });
 

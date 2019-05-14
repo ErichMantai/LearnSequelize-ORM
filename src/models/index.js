@@ -5,10 +5,10 @@ const config = require('../../config/database.js');
 
 const db = {
   Cliente: require('./cliente'),
+  ClienteEndereco: require('./endereco'),
   Usuario: require('./usuario'),
   Categoria: require('./categoria'),
   Produto: require('./produto'),
-  clienteEndereco: require('./endereco'),
 };
 const sequelize = new Sequelize(config);
 
@@ -28,7 +28,5 @@ Object.keys(db).forEach((modelName) => {
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
-db.Cliente.hasMany(db.clienteEndereco);
-db.Produto.belongsTo(db.Categoria, {as:'categoria'});
 
 module.exports = db;

@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    const  Endereco = sequelize.define('Cliente-Endereco', {
+    const  clienteEndereco = sequelize.define('Cliente-Endereco', {
        cliente_id: {
          field: 'cliente_id',
          type: DataTypes.INTEGER,
@@ -15,10 +15,10 @@ module.exports = (sequelize, DataTypes) => {
     }, {
       freezeTableName :true
     });
-    //  Endereco.associate = function(models) {
-      //  models.Cliente.belongsTo(models.Endereco,{as:'endereco'}, {foreignKey: {allowNull: false}});
-      // }; 
-  return Endereco;  
+    clienteEndereco.associate = function(models) {
+      clienteEndereco.belongsTo(models.Cliente, {as:'endereco'});
+      }; 
+  return clienteEndereco;  
   
   }
   
